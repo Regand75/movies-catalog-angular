@@ -1,6 +1,8 @@
 <section class="main">
   <div class="container">
-    <app-card-movies></app-card-movies>
+    @for(movie of movies; track movie.id) {
+    <app-card-movie class="main__card-movie" [movie]="movie"></app-card-movie>
+    }
   </div>
 </section>
 

@@ -1,6 +1,52 @@
 {
   "movies": [
-    {"id":  1, "title":  "Начало", "year":  2010},
-    {"id":  1, "title":  "Интерстеллар", "year":  2010}
+    {
+      "id": 1,
+      "title": "Начало",
+      "year": 2010,
+      "src": "./movies-img/beginning.png"
+    },
+    {
+      "id": 2,
+      "title": "Интерстеллар",
+      "year": 2014,
+      "src": "./movies-img/interstellar.png"
+    },
+    {
+      "id": 3,
+      "title": "Остров проклядых",
+      "year": 2009,
+      "src": "./movies-img/island.png"
+    },
+    {
+      "id": 4,
+      "title": "Джентльмены",
+      "year": 2019,
+      "src": "./movies-img/gentlemen.png"
+    },
+    {
+      "id": 5,
+      "title": "1+1",
+      "year": 2011,
+      "src": "./movies-img/one.png"
+    },
+    {
+      "id": 6,
+      "title": "Гладиатор",
+      "year": 2000,
+      "src": "./movies-img/gladiator.png"
+    },
+    {
+      "id": 7,
+      "title": "Леон",
+      "year": 1994,
+      "src": "./movies-img/leon.png"
+    },
+    {
+      "id": 8,
+      "title": "Темный рыцарь",
+      "year": 2008,
+      "src": "./movies-img/dark.png"
+    }
   ]
 }
