@@ -1,36 +1,64 @@
-:host {
+.movie-card {
   width: 210px;
-  height: 350px;
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  .movie-card {
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
-    position: relative;
-    transition: all .5s ease;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
 
-    &:hover {
-      transform: scale(1.1);
-    }
+  &__poster {
+    flex-shrink: 0;
 
-    .movie-card__link {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 1px solid #333;
+      transition: opacity 0.3s ease;
 
-      .movie-card__poster {
-        img {
-          width: 100%;
-          height: 300px;
-        }
-      }
-
-      .movie-card__info {
-        padding: 0 10px 10px;
+      &:hover {
+        opacity: 0.9;
       }
     }
   }
-}
 
+  &__info {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ff9800;
+    }
+  }
+
+  &__year {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 5px;
+    display: block;
+  }
+}
