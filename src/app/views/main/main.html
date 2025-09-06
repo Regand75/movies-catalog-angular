@@ -1,6 +1,6 @@
 <section class="main">
   <div class="container">
-    @for(movie of movies; track movie.id) {
+    @for(movie of filterMovies; track movie.id) {
     <app-card-movie class="main__card-movie" [movie]="movie" (click)="openMovie(movie)"></app-card-movie>
     }
   </div>

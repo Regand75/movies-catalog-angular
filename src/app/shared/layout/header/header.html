@@ -1,11 +1,19 @@
 <header class="header">
   <div class="container">
-    <div class="container-wrapper">
-      <h1 class="header-title">
+    <div class="header__wrapper">
+      <h1 class="header__title">
         Каталог фильмов
       </h1>
-      <div class="header-search">
-        <input type="text" class="header-search-input" placeholder="Введите для поиска...">
+      <div class="header__search">
+        <label for="movie-search" class="header__search-label">Поиск фильмов</label>
+        <input
+          id="movie-search"
+          type="text"
+          [(ngModel)]="query"
+          (input)="onSearchChange()"
+          class="header__search-input"
+          placeholder="Введите название фильма..."
+        >
       </div>
     </div>
   </div>
