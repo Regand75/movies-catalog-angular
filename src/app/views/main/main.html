@@ -1,8 +1,12 @@
 <section class="main">
   <div class="container">
     @for(movie of movies; track movie.id) {
-    <app-card-movie class="main__card-movie" [movie]="movie"></app-card-movie>
+    <app-card-movie class="main__card-movie" [movie]="movie" (click)="openMovie(movie)"></app-card-movie>
     }
   </div>
 </section>
+
+@if (selectedMovie) {
+  <app-movie-popup [movie]="selectedMovie" (close)="closeMovie()"></app-movie-popup>
+}
 

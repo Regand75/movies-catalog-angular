@@ -1,0 +1,20 @@
+@if (movie) {
+  <div class="overlay" (click)="close.emit()">
+    <div class="popup" (click)="$event.stopPropagation()">
+      <button class="popup__close" (click)="close.emit()">×</button>
+
+      <div class="popup__content">
+        <img class="popup__poster" [src]="movie.src" [alt]="'Постер: ' + movie.title" />
+
+        <div class="popup__info">
+          <h2>{{ movie.title }}</h2>
+          <p><strong>Год:</strong> {{ movie.year }}</p>
+          <p><strong>Рейтинг:</strong> ⭐ {{ movie.rating }}</p>
+          <p><strong>Жанры:</strong> {{ movie.genres.join(', ') }}</p>
+          <p class="popup__description">{{ movie.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+

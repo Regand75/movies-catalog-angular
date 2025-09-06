@@ -3,4 +3,7 @@ export interface Movie {
   title: string;
   year: number;
   src: string;
+  description: string;
+  genres: string[];
+  rating: number;
 }
