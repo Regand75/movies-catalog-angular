@@ -1,4 +1,4 @@
-import {Component, HostListener, inject, OnInit, Renderer2, ElementRef} from '@angular/core';
+import {Component, HostListener, inject, OnInit} from '@angular/core';
 import {CardMovie} from '../../shared/components/card-movie/card-movie';
 import {Movie} from '../../../types/movie.type';
 import {MoviesService} from '../../shared/services/movies.service';
