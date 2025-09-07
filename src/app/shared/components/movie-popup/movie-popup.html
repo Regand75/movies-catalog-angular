@@ -1,6 +1,6 @@
 @if (movie) {
-  <div class="overlay" (click)="close.emit()">
-    <div class="popup" (click)="$event.stopPropagation()">
+  <div class="overlay" (click)="close.emit()" [@backdropAnimation]>
+    <div class="popup" (click)="$event.stopPropagation()" [@popupAnimation]>
       <button class="popup__close" (click)="close.emit()">×</button>
 
       <div class="popup__content">
