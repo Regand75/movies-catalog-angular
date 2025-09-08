@@ -1,7 +1,11 @@
 <section class="main">
   <div class="container">
-    @for(movie of filterMovies; track movie.id) {
-    <app-card-movie class="main__card-movie" [movie]="movie" (click)="openMovie(movie)"></app-card-movie>
+    @if(filterMovies.length > 0) {
+      @for(movie of filterMovies; track movie.id) {
+        <app-card-movie class="main__card-movie" [movie]="movie" (click)="openMovie(movie)"></app-card-movie>
+      }
+    } @else {
+      <p>Поиск не дал результатов</p>
     }
   </div>
 </section>
